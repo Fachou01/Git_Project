@@ -5,6 +5,7 @@ import java.io.IOException;
 public class CallRestWebService {
 	
 	public static void main(String[] args) {
-		System.out.println("Test");
+		Gamers g1 = new Gamers(1252,"Stow",99,99);
+		System.out.println(g1);
 	}
 }
