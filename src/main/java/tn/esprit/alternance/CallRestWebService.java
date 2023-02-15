@@ -11,7 +11,7 @@ public class CallRestWebService {
 		Person p1 = new Person(1,"Koumenji","Mohamed");
 		System.out.println(p1);
 
-Puissance p1 =new Puissance();
+		Puissance p1 =new Puissance();
 		p1.calcule(4, 5);
 	}
 }
