@@ -18,5 +18,15 @@ public class CallRestWebService {
 		Etudiant etu2=new Etudiant("Abdilkader","chouchene");
 		etu1.compareTo(etu2);
 		System.out.println(etu1);
+
+		Car carFirst = new Car("renault","symbole",2020,5000);
+		carFirst.start();
+		carFirst.stop();
+		carFirst.assign("koumenji");
+		carFirst.markBroken();
+		carFirst.start();
+		carFirst.fix();
+		carFirst.start();
+		carFirst.stop();
 	}
 }
