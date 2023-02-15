@@ -15,5 +15,20 @@ public class CallRestWebService {
 		System.out.println(product2);
 		Puissance puissance1 =new Puissance();
 		puissance1.calcule(4, 5);
+		
+		Etudiant etu1=new Etudiant("youssef","chouchene");
+		Etudiant etu2=new Etudiant("Abdilkader","chouchene");
+		etu1.compareTo(etu2);
+		System.out.println(etu1);
+
+		Car carFirst = new Car("renault","symbole",2020,5000);
+		carFirst.start();
+		carFirst.stop();
+		carFirst.assign("koumenji");
+		carFirst.markBroken();
+		carFirst.start();
+		carFirst.fix();
+		carFirst.start();
+		carFirst.stop();
 	}
 }
