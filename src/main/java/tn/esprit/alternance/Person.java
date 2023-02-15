@@ -71,6 +71,10 @@ public class Person {
 		return true;
 	}
 	
+	public boolean test(){
+	return true;	
+	}
+	
 	
 	
 	
