@@ -8,10 +8,10 @@ public class CallRestWebService {
 		Gamers g1 = new Gamers(1252,"Stow",99,99);
 		System.out.println(g1);
 
-		Person p1 = new Person(1,"Koumenji","Mohamed");
-		System.out.println(p1);
+		Person person1 = new Person(1,"Koumenji","Mohamed");
+		System.out.println(person1);
 
-		Puissance p1 =new Puissance();
-		p1.calcule(4, 5);
+		Puissance puissance1 =new Puissance();
+		puissance1.calcule(4, 5);
 	}
 }

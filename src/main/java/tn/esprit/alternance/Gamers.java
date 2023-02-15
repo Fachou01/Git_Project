@@ -27,10 +27,10 @@ public String getUsername() {
 public void setUsername(String username) {
 	this.username = username;
 }
-public String getLevel() {
+public int getLevel() {
 	return level;
 }
-public void setLevel(String level) {
+public void setLevel(int level) {
 	this.level = level;
 }
 public int getWins() {
