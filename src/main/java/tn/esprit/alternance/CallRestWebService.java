@@ -13,5 +13,10 @@ public class CallRestWebService {
 
 		Puissance puissance1 =new Puissance();
 		puissance1.calcule(4, 5);
+		
+		Etudiant etu1=new Etudiant("youssef","chouchene");
+		Etudiant etu2=new Etudiant("Abdilkader","chouchene");
+		etu1.compareTo(etu2);
+		System.out.println(etu1);
 	}
 }

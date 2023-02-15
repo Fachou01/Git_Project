@@ -16,9 +16,8 @@ public Etudiant(){
 	super();
 	// TODO Auto-generated constructor stub
 }
-public Etudiant(int id, String nom, String prenom) {
+public Etudiant(String nom, String prenom) {
 	super();
-	this.id = id;
 	this.nom = nom;
 	this.prenom = prenom;
 }
