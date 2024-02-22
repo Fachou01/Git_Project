@@ -1,47 +1,20 @@
-// pipeline {
-//     agent any
-//     triggers {
-//         // Configuration du déclenchement du pipeline lorsqu'un push est détecté dans le référentiel Git
-//         pollSCM '* * * * *'
-//     }
-//     stages {
-//         stage('Récupération du code source') {
-//             steps {
-//                 // Cette étape clone le référentiel Git
-//                 git 'https://github.com/Fachou01/Git_Project.git'
-//             }
-//         }
- 
-//         stage('Affichage de la date système') {
-//             steps {
-//                 // Cette étape affiche la date système
-//                 script {
-//                     def date = sh(script: 'date', returnStdout: true).trim()
-//                     echo "La date système est : ${date}"
-//                 }
-//             }
-//         }
-//     }
-// }
 pipeline {
     agent any
 
+    triggers {
+        // Trigger the pipeline on every push to the repository
+        pollSCM('* * * * *')
+    }
+
     stages {
-        stage('Checkout') {
+        stage('Display System Date') {
             steps {
-                // Récupération du code source depuis Git
-                git 'https://github.com/Fachou01/Git_Project.git'
-            }
-        }
-        stage('Affichage de la date système') {
-            steps {
-                // Affichage de la date système
+                // Print the current system date
                 script {
-                    def date = sh(script: 'date', returnStdout: true).trim()
-                    echo "La date système est : ${date}"
+                    def currentDate = new Date()
+                    echo "Current system date is: ${currentDate}"
                 }
             }
         }
     }
 }
-
