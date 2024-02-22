@@ -1,41 +1,20 @@
-// pipeline {
-//     agent any
-//     triggers {
-//         // Configuration du déclenchement du pipeline lorsqu'un push est détecté dans le référentiel Git
-//         pollSCM 'H/5 * * * *'
-//     }
-//     stages {
-//         stage('Récupération du code source') {
-//             steps {
-//                 // Cette étape clone le référentiel Git
-//                 git 'https://github.com/Fachou01/Git_Project.git'
-//             }
-//         }
- 
-//         stage('Affichage de la date système') {
-//             steps {
-//                 // Cette étape affiche la date système
-//                 script {
-//                     def date = sh(script: 'date', returnStdout: true).trim()
-//                     echo "La date système est : ${date}"
-//                 }
-//             }
-//         }
-//     }
-// }
 pipeline {
     agent any
-
+    triggers {
+        // Configuration du déclenchement du pipeline lorsqu'un push est détecté dans le référentiel Git
+        pollSCM 'H/5 * * * *'
+    }
     stages {
-        stage('Checkout') {
+        stage('Récupération du code source') {
             steps {
-                // Récupération du code source depuis Git
+                // Cette étape clone le référentiel Git
                 git 'https://github.com/Fachou01/Git_Project.git'
             }
         }
+ 
         stage('Affichage de la date système') {
             steps {
-                // Affichage de la date système
+                // Cette étape affiche la date système
                 script {
                     def date = sh(script: 'date', returnStdout: true).trim()
                     echo "La date système est : ${date}"
@@ -44,4 +23,25 @@ pipeline {
         }
     }
 }
+// pipeline {
+//     agent any
+
+//     stages {
+//         stage('Checkout') {
+//             steps {
+//                 // Récupération du code source depuis Git
+//                 git 'https://github.com/Fachou01/Git_Project.git'
+//             }
+//         }
+//         stage('Affichage de la date système') {
+//             steps {
+//                 // Affichage de la date système
+//                 script {
+//                     def date = sh(script: 'date', returnStdout: true).trim()
+//                     echo "La date système est : ${date}"
+//                 }
+//             }
+//         }
+//     }
+// }
 
