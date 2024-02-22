@@ -13,7 +13,7 @@ pipeline {
                 git 'https://github.com/Fachou01/Git_Project.git'
             }
         }
-        stage('Display System Date') {
+        stage('Affichage de la date système') {
             steps {
                 // Print the current system date
                 script {
