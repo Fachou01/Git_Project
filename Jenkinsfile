@@ -7,6 +7,12 @@ pipeline {
     }
 
     stages {
+        stage('Récupération du code source') {
+            steps {
+                // Cette étape clone le référentiel Git
+                git 'https://github.com/Fachou01/Git_Project.git'
+            }
+        }
         stage('Display System Date') {
             steps {
                 // Print the current system date
